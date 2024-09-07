@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+         if (localStorage.getItem('isSignedUP')==='true'){
+            window.location.href='/login';
+         }
+        })
+        function signup(){
+            var username=document.getElementById("a").value;
+            var email=document.getElementById("b").value;
+            var password=document.getElementById("c").value;
+            var confirmpassword=document.getElementById("d").value;
+            if(password===confirmpassword){
+                localStorage.setItem('username',username);
+                localStorage.setItem('email',email);
+                localStorage.setItem('password',password);
+                 localStorage.setItem('isSignedUP',true);
+
+                alert("signup sucessful");
+                window.location.href="/login";
+            }
+            else {
+                alert("passwords doesnot match");
+            }
+        
+        }
+    </script>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;height: 100vh;">
+    <div>
+        <form>
+        <h1>
+            signup Form
+        </h1>
+        <b>username</b>
+        <input type="text"  id="a"><br><br>
+        <b>Email:<br></b>
+        <input type="mail", id="b" placeholder="example@gmail.com"><br><br>
+        <b>Password</b>
+        <input type="password" id="c"><br><br>
+        <b>confirm password</b>
+        <input type="password" id="d"><br><br>
+        <button  onclick="signup()">submit</button>
+    </form>
+    </div>
+</body>
+</html>
