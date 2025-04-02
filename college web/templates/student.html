@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+    <script>
+        function displayInformation() {
+            // Get the values from the form
+            var name = document.getElementById("name").value;
+            var dob = document.getElementById("dob").value;
+            var email = document.getElementById("email").value;
+            var branch = document.getElementById("branch").value;
+            var password = document.getElementById("password").value;
+
+            // Display the values
+            document.getElementById("output").innerHTML = 
+                "<h2>Entered Information</h2>" +
+                "<p><strong>Name:</strong> " + name + "</p>" +
+                "<p><strong>Date of Birth:</strong> " + dob + "</p>" +
+                "<p><strong>Email:</strong> " + email + "</p>" +
+                "<p><strong>Branch:</strong> " + branch + "</p>" +
+                // "<p><strong>Password:</strong> " + password + "</p>"+
+                "dear"+"  "+name+" "+ "your attendance in current semister is 76%";
+        }
+    </script>
+</head>
+<body><center>
+    <h1>Student  Information Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="branch"><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <input type="button" value="Submit" onclick="displayInformation()">
+    </form>
+    
+    <div id="output"></div>
+</body></html></center>
+</html>

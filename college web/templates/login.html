@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Login(){
+        var s=document.getElementById('f').value;
+        var q=document.getElementById('g').value;
+
+        var x=localStorage.getItem('username');
+        var y=localStorage.getItem('password');
+
+        if(x===s & y===q){
+            alert("login succesfull");
+            window.location.href="/student";
+        }
+        else{
+            alert("invalid credentials")
+        }
+
+
+
+
+    }
+</script>
+<body>
+    <h1>Login Form</h1>
+    <b>username</b>
+    <input type="text" id="f"><br><br>
+    <b>password</b>
+    <input type="password"  id="g"><br><br>
+    <button type="submit" onclick="Login()">Login</button>
+    <h1>NOTE:</h1><p><i>your password and username your HTNO/ROLLNO</i></p>
+</body>
+</html>
